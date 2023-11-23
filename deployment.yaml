@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 6
+  replicas: 3
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:1.19.10
           resources:
             limits:
               memory: "128Mi"
